@@ -1,5 +1,14 @@
 import React from "react";
-import { Bell, MessageSquare, Search, ChevronDown, Mail, FileText, ClipboardList, BarChart3 } from "lucide-react";
+import {
+  Bell,
+  MessageSquare,
+  Search,
+  ChevronDown,
+  Mail,
+  FileText,
+  ClipboardList,
+  BarChart3,
+} from "lucide-react";
 
 export default function EopsDashboard() {
   return (
@@ -13,9 +22,16 @@ export default function EopsDashboard() {
             </div>
             <span className="text-2xl font-bold text-gray-800">eOPS</span>
           </div>
-          <h1 className="text-lg md:text-xl font-semibold text-gray-700">
-            Welcome Nasir
-          </h1>
+
+          {/* Added Text */}
+          <div className="flex flex-col">
+            <span className="text-xs md:text-sm font-medium text-cyan-600 tracking-wide">
+              Testing AI Agent - by Haider
+            </span>
+            <h1 className="text-lg md:text-xl font-semibold text-gray-700">
+              Welcome Nasir
+            </h1>
+          </div>
         </div>
 
         <div className="flex items-center gap-4 w-full md:w-auto">
@@ -30,12 +46,14 @@ export default function EopsDashboard() {
 
           <div className="flex items-center gap-4">
             <MessageSquare className="w-5 h-5 text-gray-600" />
+
             <div className="relative">
               <Bell className="w-5 h-5 text-gray-600" />
               <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
                 4
               </span>
             </div>
+
             <div className="flex items-center gap-2">
               <img
                 src="https://via.placeholder.com/40"
@@ -62,6 +80,7 @@ export default function EopsDashboard() {
                 Here is today's schedule!
               </p>
             </div>
+
             <div className="flex gap-2">
               <button className="px-4 py-1 text-sm bg-cyan-500 text-white rounded-lg">
                 Calendar
@@ -72,15 +91,13 @@ export default function EopsDashboard() {
             </div>
           </div>
 
-          {/* Fake Calendar Grid */}
+          {/* Calendar Grid */}
           <div className="grid grid-cols-7 gap-2 text-xs text-gray-500 mb-2">
-            {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(
-              (day) => (
-                <div key={day} className="text-center font-medium">
-                  {day}
-                </div>
-              )
-            )}
+            {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
+              <div key={day} className="text-center font-medium">
+                {day}
+              </div>
+            ))}
           </div>
 
           <div className="grid grid-cols-7 gap-2">
